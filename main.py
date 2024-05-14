@@ -32,17 +32,18 @@ def build_model():
         layers.experimental.preprocessing.RandomFlip("horizontal", input_shape=(100, 100, 3)),
         layers.experimental.preprocessing.RandomZoom(0.1),
         layers.experimental.preprocessing.RandomContrast(0.2),
-        Conv2D(32, kernel_size=(3, 3), activation='relu'),
-        MaxPooling2D(pool_size=(2, 2)),
-        Conv2D(64, kernel_size=(3, 3), activation='relu'),
-        MaxPooling2D(pool_size=(2, 2)),
-        Conv2D(128, kernel_size=(3, 3), activation='relu'),
-        MaxPooling2D(pool_size=(2, 2)),
-        Flatten(),
-        Dense(128, activation='relu'),
-        Dropout(0.5),
-        Dense(1, activation='sigmoid')
     ])
+    Conv2D(32, kernel_size=(3, 3), activation='relu'),
+    MaxPooling2D(pool_size=(2, 2)),
+    Conv2D(64, kernel_size=(3, 3), activation='relu'),
+    MaxPooling2D(pool_size=(2, 2)),
+    Conv2D(128, kernel_size=(3, 3), activation='relu'),
+    MaxPooling2D(pool_size=(2, 2)),
+    Flatten(),
+    Dense(128, activation='relu'),
+    Dropout(0.5),
+    Dense(1, activation='sigmoid')
+    
     return model
 
 
